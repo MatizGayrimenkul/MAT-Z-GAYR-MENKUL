@@ -119,40 +119,57 @@ Tarayıcınız video etiketini desteklemiyor.
 </div>
 </div>
 </section>
-<!-- Yeni İlan Ekleme Formu -->
-<section>
-<h2>Yeni İlan Ekle (Personel)</h2>
-<form action="https//formspree.io/f/xvkakqvq/f>
-<div>
-<etiket>İlan Başlığı:</etiket>
-<input type="text" required>
-</div>
-<div>
-<etiket>Kategori:</etiket>
-<select>
-<option>Daire</option>
-<option>Arsa</option>
-<option>Dükkan</option>
+<label for="baslik">İlan Başlığı:</label>
+<input type="text" id="baslik" name="baslik" required>
+
+<label for="aciklama">Açıklama:</label>
+<textarea id="aciklama" name="aciklama" rows="4"></textarea>
+
+<label for="oda_sayisi">Oda Sayısı:</label>
+<select id="oda_sayisi" name="oda_sayisi">
+    <option value="1+0">1+0</option>
+    <option value="1+1">1+1</option>
+    <option value="2+1">2+1</option>
+    <option value="3+1">3+1</option>
+    <option value="4+1">4+1</option>
 </select>
-</div>
-<div>
-<etiket>İlan Türü:</etiket>
-<select>
-<option>Satılık</option>
-<option>Kiralık</option>
-</select>
-</div>
-<div>
-<etiket>Fiyat (TL):</etiket>
-<input type="number" required>
-</div>
-<div>
-<etiket>Fotoğraf Ekle:</etiket>
-<input type="file" multiple>
-</div>
-<düğme type="submit">İlanı Yayınla</düğme>
-</form>
-</section>
+
+<label for="kat">Bulunduğu Kat:</label>
+<input type="number" id="kat" name="kat">
+
+<label for="kat_sayisi">Kat Sayısı:</label>
+<input type="number" id="kat_sayisi" name="kat_sayisi">
+
+<label for="bina_yasi">Bina Yaşı:</label>
+<input type="number" id="bina_yasi" name="bina_yasi">
+
+<label for="aidat">Aidat (TL):</label>
+<input type="number" id="aidat" name="aidat">
+
+<fieldset>
+    <legend>Cephe</legend>
+    <input type="checkbox" id="kuzey" name="cephe" value="Kuzey">
+    <label for="kuzey">Kuzey</label>
+    <input type="checkbox" id="guney" name="cephe" value="Güney">
+    <label for="guney">Güney</label>
+    <input type="checkbox" id="dogu" name="cephe" value="Doğu">
+    <label for="dogu">Doğu</label>
+    <input type="checkbox" id="bati" name="cephe" value="Batı">
+    <label for="bati">Batı</label>
+</fieldset>
+
+<fieldset>
+    <legend>Özellikler</legend>
+    <input type="checkbox" id="asansor" name="ozellik" value="Asansör">
+    <label for="asansor">Asansör</label>
+    <input type="checkbox" id="otopark" name="ozellik" value="Otopark">
+    <label for="otopark">Otopark</label>
+    <input type="checkbox" id="balkon" name="ozellik" value="Balkon">
+    <label for="balkon">Balkon</label>
+    <input type="checkbox" id="guvenlik" name="ozellik" value="Güvenlik">
+    <label for="guvenlik">Güvenlik</label>
+</fieldset>
+
 <section id="takim">
 <h2>Ekibimiz</h2>
 <div class="grid">
