@@ -119,56 +119,88 @@ Tarayıcınız video etiketini desteklemiyor.
 </div>
 </div>
 </section>
-<label for="baslik">İlan Başlığı:</label>
-<input type="text" id="baslik" name="baslik" required>
+<section id="ilan-ekle" style="padding: 20px; max-width: 800px; margin: auto;">
+  <h2>Yeni İlan Ekle</h2>
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+    
+    <div>
+      <label for="baslik"><strong>İlan Başlığı:</strong></label><br>
+      <input type="text" id="baslik" name="baslik" placeholder="Örn: Mezitli'de Deniz Manzaralı 3+1 Daire" required style="width: 100%; padding: 8px; margin-top: 5px;">
+    </div>
 
-<label for="aciklama">Açıklama:</label>
-<textarea id="aciklama" name="aciklama" rows="4"></textarea>
+    <div>
+      <label for="aciklama"><strong>Açıklama:</strong></label><br>
+      <textarea id="aciklama" name="aciklama" rows="4" placeholder="İlan detaylarını buraya yazınız..." required style="width: 100%; padding: 8px; margin-top: 5px;"></textarea>
+    </div>
 
-<label for="oda_sayisi">Oda Sayısı:</label>
-<select id="oda_sayisi" name="oda_sayisi">
-    <option value="1+0">1+0</option>
-    <option value="1+1">1+1</option>
-    <option value="2+1">2+1</option>
-    <option value="3+1">3+1</option>
-    <option value="4+1">4+1</option>
-</select>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+      <div>
+        <label for="oda_sayisi"><strong>Oda Sayısı:</strong></label><br>
+        <select id="oda_sayisi" name="oda_sayisi" style="width: 100%; padding: 8px; margin-top: 5px;">
+          <option value="1+0">1+0</option>
+          <option value="1+1">1+1</option>
+          <option value="2+1">2+1</option>
+          <option value="3+1">3+1</option>
+          <option value="4+1">4+1</option>
+          <option value="5+1">5+1 ve üzeri</option>
+        </select>
+      </div>
 
-<label for="kat">Bulunduğu Kat:</label>
-<input type="number" id="kat" name="kat">
+      <div>
+        <label for="bulundugu_kat"><strong>Bulunduğu Kat:</strong></label><br>
+        <input type="number" id="bulundugu_kat" name="bulundugu_kat" placeholder="Örn: 5" required style="width: 100%; padding: 8px; margin-top: 5px;">
+      </div>
 
-<label for="kat_sayisi">Kat Sayısı:</label>
-<input type="number" id="kat_sayisi" name="kat_sayisi">
+      <div>
+        <label for="kat_sayisi"><strong>Kat Sayısı:</strong></label><br>
+        <input type="number" id="kat_sayisi" name="kat_sayisi" placeholder="Örn: 12" required style="width: 100%; padding: 8px; margin-top: 5px;">
+      </div>
 
-<label for="bina_yasi">Bina Yaşı:</label>
-<input type="number" id="bina_yasi" name="bina_yasi">
+      <div>
+        <label for="bina_yasi"><strong>Bina Yaşı:</strong></label><br>
+        <input type="number" id="bina_yasi" name="bina_yasi" placeholder="Örn: 0" style="width: 100%; padding: 8px; margin-top: 5px;">
+      </div>
 
-<label for="aidat">Aidat (TL):</label>
-<input type="number" id="aidat" name="aidat">
+      <div>
+        <label for="aidat"><strong>Aidat (TL):</strong></label><br>
+        <input type="number" id="aidat" name="aidat" placeholder="Örn: 500" style="width: 100%; padding: 8px; margin-top: 5px;">
+      </div>
 
-<fieldset>
-    <legend>Cephe</legend>
-    <input type="checkbox" id="kuzey" name="cephe" value="Kuzey">
-    <label for="kuzey">Kuzey</label>
-    <input type="checkbox" id="guney" name="cephe" value="Güney">
-    <label for="guney">Güney</label>
-    <input type="checkbox" id="dogu" name="cephe" value="Doğu">
-    <label for="dogu">Doğu</label>
-    <input type="checkbox" id="bati" name="cephe" value="Batı">
-    <label for="bati">Batı</label>
-</fieldset>
+      <div>
+        <label for="fiyat"><strong>Fiyat (TL):</strong></label><br>
+        <input type="number" id="fiyat" name="fiyat" placeholder="Örn: 3250000" required style="width: 100%; padding: 8px; margin-top: 5px;">
+      </div>
+    </div>
 
-<fieldset>
-    <legend>Özellikler</legend>
-    <input type="checkbox" id="asansor" name="ozellik" value="Asansör">
-    <label for="asansor">Asansör</label>
-    <input type="checkbox" id="otopark" name="ozellik" value="Otopark">
-    <label for="otopark">Otopark</label>
-    <input type="checkbox" id="balkon" name="ozellik" value="Balkon">
-    <label for="balkon">Balkon</label>
-    <input type="checkbox" id="guvenlik" name="ozellik" value="Güvenlik">
-    <label for="guvenlik">Güvenlik</label>
-</fieldset>
+    <fieldset style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+      <legend><strong>Cephe</strong></legend>
+      <label style="margin-right: 15px;"><input type="checkbox" name="cephe" value="Kuzey"> Kuzey</label>
+      <label style="margin-right: 15px;"><input type="checkbox" name="cephe" value="Güney"> Güney</label>
+      <label style="margin-right: 15px;"><input type="checkbox" name="cephe" value="Doğu"> Doğu</label>
+      <label><input type="checkbox" name="cephe" value="Batı"> Batı</label>
+    </fieldset>
+
+    <fieldset style="padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+      <legend><strong>Özellikler</strong></legend>
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px;">
+        <label><input type="checkbox" name="ozellikler" value="Asansör"> Asansör</label>
+        <label><input type="checkbox" name="ozellikler" value="Otopark"> Otopark</label>
+        <label><input type="checkbox" name="ozellikler" value="Balkon"> Balkon</label>
+        <label><input type="checkbox" name="ozellikler" value="Havuz"> Havuz</label>
+        <label><input type="checkbox" name="ozellikler" value="Hamam"> Hamam</label>
+        <label><input type="checkbox" name="ozellikler" value="Sauna"> Sauna</label>
+        <label><input type="checkbox" name="ozellikler" value="24 Saat Güvenlik"> 24 Saat Güvenlik</label>
+        <label><input type="checkbox" name="ozellikler" value="Kapıcı"> Kapıcı</label>
+      </div>
+    </fieldset>
+
+    <button type="submit" style="background-color: #2d3436; color: white; padding: 12px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; font-weight: bold;">
+      İlanı Yayınla
+    </button>
+
+  </form>
+</section>
+  
 
 <section id="takim">
 <h2>Ekibimiz</h2>
@@ -202,7 +234,10 @@ Tarayıcınız video etiketini desteklemiyor.
 <button onclick="alert('Hesaplama yapıldı.')">Hesapla</button>
 </section>
 <altbilgi>
- <p>Matiz Gayrimenkul - Mersin | Tel: <a href="tel:+905350810455">05350810455</a></p>
+ <footer style="text-align: center; padding: 20px; background-color: #f8f9fa; margin-top: 30px;">
+  <p><strong>Matiz Gayrimenkul - Mersin</strong> | <strong>İletişim:</strong> <a href="tel:+905350810455" style="text-decoration: none; color: #e67e22; font-weight: bold;">0535 081 04 55</a></p>
+ </footer>
+  
 </a></p>
 </altbilgi>
 </body>
