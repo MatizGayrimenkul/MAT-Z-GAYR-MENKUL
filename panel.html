@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlan Yönetim Paneli - Matiz Gayrimenkul</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 15px;
+            color: #2d3436;
+        }
+        .panel-card {
+            background: white;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        .header-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #f1f2f6;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .header-bar h1 {
+            margin: 0;
+            font-size: 20px;
+            color: #e67e22;
+        }
+        .logout-btn {
+            background-color: #d63031;
+            color: white;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .publish-btn {
+            width: 100%;
+            padding: 16px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(39, 174, 96, 0.2);
+        }
+        .publish-btn:hover {
+            background-color: #219150;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .section-title {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 15px;
+            color: #2d3436;
+            border-left: 4px solid #e67e22;
+            padding-left: 8px;
+        }
+        input[type="text"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #dfe6e9;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+            background-color: #fcfcfc;
+        }
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .btn-option {
+            position: relative;
+        }
+        .btn-option input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .btn-option span {
+            display: inline-block;
+            padding: 10px 16px;
+            background-color: #f1f2f6;
+            border: 1px solid #dfe6e9;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s;
+        }
+        .btn-option input:checked + span {
+            background-color: #0984e3;
+            color: white;
+            border-color: #0984e3;
+            font-weight: bold;
+        }
+        .grid-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        @media (max-width
+                
